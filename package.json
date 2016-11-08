@@ -1,0 +1,30 @@
+{
+  "name": "dgt-scheduler",
+  "version": "1.0.0",
+  "description": "A scheduler that let you run, wait and notify non blocking tasks like synchronous code using yield and generator functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://0angelic0@github.com/0angelic0/dgt-scheduler.git"
+  },
+  "keywords": [
+    "scheduler",
+    "task",
+    "wait",
+    "notify",
+    "yield",
+    "generator"
+  ],
+  "author": "0angelic0 <kungking.cpre@gmail.com> (http://blog.0angelic0.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0angelic0/dgt-scheduler/issues"
+  },
+  "homepage": "https://github.com/0angelic0/dgt-scheduler#readme",
+  "devDependencies": {
+    "should": "^11.1.1"
+  }
+}
