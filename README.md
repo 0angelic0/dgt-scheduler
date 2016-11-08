@@ -96,5 +96,35 @@ scheduler.onError(function(t, func, owner, error) {
 })
 ```
 
+## Multitasking
+You can add many tasks as you want.
+
+```
+function Game() {
+  scheduler.add(this.run, this)
+}
+
+Game.prototype.run = function*() {
+  while (true) {
+    let command = yield scheduler.wait()
+    if (command.id == 'QUIT') return
+    this.processCommand(command)
+  }
+}
+
+Game.prototype.processCommand = function(command) {
+  // do something useful
+}
+```
+
+and later
+
+```
+let game1 = new Game()
+let game2 = new Game()
+let game3 = new Game()
+let game4 = new Game()
+```
+
 ## License
 dgt-scheduler is released under the MIT license. See LICENSE for details.
