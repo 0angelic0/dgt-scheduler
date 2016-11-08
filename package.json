@@ -1,6 +1,6 @@
 {
   "name": "dgt-scheduler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A scheduler that let you run, wait and notify non blocking tasks like synchronous code using yield and generator functions.",
   "main": "index.js",
   "scripts": {
