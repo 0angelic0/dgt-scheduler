@@ -101,7 +101,11 @@ You can add many tasks as you want.
 
 ```
 function Game() {
-  scheduler.add(this.run, this)
+  this.t = scheduler.add(this.run, this)
+}
+
+Game.prototype.notify = function(command) {
+  scheduler.notify(this.t, command)
 }
 
 Game.prototype.run = function*() {
@@ -124,6 +128,11 @@ let game1 = new Game()
 let game2 = new Game()
 let game3 = new Game()
 let game4 = new Game()
+
+game1.notify(quitCommand)
+game2.notify(moveCommand)
+game3.notify(joinCommand)
+game4.notify(attackCommand)
 ```
 
 ## License
